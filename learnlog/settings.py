@@ -134,7 +134,7 @@ if 'HOME' in os.environ:
         }
         SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
         ALLOWED_HOSTS = ['learnlogtest.herokuapp.com']
-		DEBUG = False
+	DEBUG = False
         BASE_DIR = os.path.dirname(os.path.abspath(__file__))
         STATIC_ROOT = 'staticfiles'
         STATICFILES_DIRS = (
