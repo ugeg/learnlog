@@ -123,7 +123,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 LOGIN_URL = '/users/login/'
 BOOTSTRAP3 = {'include_jquery': True}
-'''
+
 # Heroku设置
 if os.environ['HOME'] == 'app/':
     import dj_database_url
@@ -132,13 +132,8 @@ if os.environ['HOME'] == 'app/':
     }
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
     ALLOWED_HOSTS = '*'
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    STATIC_ROOT = 'staticfiles'
-    STATICFILES_DIRS = (
-        os.path.join(BASE_DIR,'static'),
-    )
-'''
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    #BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    #STATIC_ROOT = 'staticfiles'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
