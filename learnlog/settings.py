@@ -125,7 +125,8 @@ LOGIN_URL = '/users/login/'
 BOOTSTRAP3 = {'include_jquery': True}
 
 # Heroku设置
-if os.getcwd() == 'app/':
+if os.environ['HOME'] == '/app':
+#if os.getcwd() == 'app/':
     import dj_database_url
     DATABASES = {
         'default':dj_database_url.config(default='postgres://localhost')
@@ -137,10 +138,4 @@ if os.getcwd() == 'app/':
     STATICFILES_DIRS = (
             os.path.join(BASE_DIR, 'static'),
 )	
-'''
-# Static files (CSS, JavaScript, Images)
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
 
-
-'''
